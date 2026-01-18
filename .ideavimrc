@@ -1,0 +1,160 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+"set multiple-cursors
+set commentary
+"set argtextobj
+"set easymotion
+"set textobj-entire
+"set ReplaceWithRegister
+set highlightedyank
+set which-key
+
+""" Plugin settings -------------------------
+"let g:argtextobj_pairs="[:],(:),<:>"
+"" which-key settings
+set notimeout
+set timeoutlen=5000
+let g:WhichKey_ShowVimActions = "true"
+
+""" Common settings -------------------------
+"set showmode
+"set so=5
+set incsearch
+"set nu
+set scrolloff=5
+map Q gq
+set visualbell
+set noerrorbells
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+"map <leader>f <Plug>(easymotion-s)
+"map <leader>e <Plug>(easymotion-f)
+"
+"map <leader>d <Action>(Debug)
+"map <leader>r <Action>(RenameElement)
+"map <leader>c <Action>(Stop)
+"map <leader>z <Action>(ToggleDistractionFreeMode)
+"
+"map <leader>s <Action>(SelectInProjectView)
+"map <leader>a <Action>(Annotate)
+"map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+"map <S-Space> <Action>(GotoNextError)
+"
+"map <leader>b <Action>(ToggleLineBreakpoint)
+"map <leader>o <Action>(FileStructurePopup)
+
+" code info
+map K <Action>(ShowHoverInfo)
+map <leader>I <Action>(QuickImplementations)
+
+" bookmarks
+let g:WhichKeyDesc_bookmarks = "<leader>o bookmarks"
+let g:WhichKeyDesc_go_to_file_tree = "<leader>oF jump to current file in file tree"
+map <leader>oF <Action>(SelectInProjectView)
+let g:WhichKeyDesc_add_bookmark = "<leader>oA add bookmark"
+map <leader>oA <Action>(ToggleBookmarkWithMnemonic)
+let g:WhichKeyDesc_rider_bookmarks = "<leader>oL List"
+map <leader>oL <Action>(ActivateBookmarksToolWindow)
+map <leader>o1 <Action>(GotoBookmark1)
+map <leader>o2 <Action>(GotoBookmark2)
+map <leader>o3 <Action>(GotoBookmark3)
+map <leader>o4 <Action>(GotoBookmark4)
+map <leader>o5 <Action>(GotoBookmark5)
+map <leader>o6 <Action>(GotoBookmark6)
+map <leader>o7 <Action>(GotoBookmark7)
+map <leader>o8 <Action>(GotoBookmark8)
+map <leader>o9 <Action>(GotoBookmark9)
+map <leader>o0 <Action>(GotoBookmark0)
+let g:WhichKeyDesc_toggle_bookmark = "<leader>ot toggle bookmark"
+map <leader>oT <Action>(ToggleBookmark)
+map <leader>oa <Action>(GotoBookmarkA)
+map <leader>ob <Action>(GotoBookmarkB)
+map <leader>oc <Action>(GotoBookmarkC)
+map <leader>od <Action>(GotoBookmarkD)
+map <leader>oe <Action>(GotoBookmarkE)
+map <leader>of <Action>(GotoBookmarkF)
+map <leader>og <Action>(GotoBookmarkG)
+map <leader>oh <Action>(GotoBookmarkH)
+map <leader>oi <Action>(GotoBookmarkI)
+map <leader>oj <Action>(GotoBookmarkJ)
+map <leader>ok <Action>(GotoBookmarkK)
+map <leader>ol <Action>(GotoBookmarkL)
+map <leader>om <Action>(GotoBookmarkM)
+map <leader>on <Action>(GotoBookmarkN)
+map <leader>oo <Action>(GotoBookmarkO)
+map <leader>op <Action>(GotoBookmarkP)
+map <leader>oq <Action>(GotoBookmarkQ)
+map <leader>or <Action>(GotoBookmarkR)
+map <leader>os <Action>(GotoBookmarkS)
+map <leader>ot <Action>(GotoBookmarkT)
+map <leader>ou <Action>(GotoBookmarkU)
+map <leader>ov <Action>(GotoBookmarkV)
+map <leader>ow <Action>(GotoBookmarkW)
+map <leader>ox <Action>(GotoBookmarkX)
+map <leader>oy <Action>(GotoBookmarkY)
+map <leader>oz <Action>(GotoBookmarkZ)
+
+"search
+let g:WhichKeyDesc_search = "<leader>s search"
+let g:WhichKeyDesc_search_file = "<leader>sf file"
+map <leader>sf <Action>(GotoFile)
+let g:WhichKeyDesc_search_text = "<leader>sg text"
+map <leader>sg <Action>(TextSearchAction)
+let g:WhichKeyDesc_search_action = "<leader>sa action"
+map <leader>sa <Action>(GotoAction)
+let g:WhichKeyDesc_search_symbol = "<leader>ss symbol"
+map <leader>ss <Action>(GotoSymbol)
+
+"next and previous navigation
+let g:WhichKeyDesc_previous = "<leader>[ previous item"
+let g:WhichKeyDesc_next = "<leader>] next item"
+
+"errors
+let g:WhichKeyDesc_next_error = "<leader>]e next error"
+map <leader>]e <Action>(ReSharperGotoNextErrorInSolution)
+let g:WhichKeyDesc_previous_error = "<leader>[e previous error"
+map <leader>[e <Action>(ReSharperGotoPrevErrorInSolution)
+
+"rider ide interaction
+let g:WhichKeyDesc_rider = "<leader>r rider"
+let g:WhichKeyDesc_rider_terminal = "<leader>rt terminal"
+map <leader>rt <Action>(ActivateTerminalToolWindow)
+let g:WhichKeyDesc_matching_brace = "%"
+map % <Action>(EditorMatchBrace)
+let g:WhichKeyDesc_rider_file_explorer = "<leader>rf file explorer"
+map <leader>rf <Action>(ActivateProjectToolWindow)
+let g:WhichKeyDesc_rider_tests = "<leader>re tests"
+map <leader>re <Action>(ActivateUnitTestsToolWindow)
+let g:WhichKeyDesc_rider_implementation = "<leader>ri implementation"
+map <leader>ri <Action>(ReSharperGotoImplementation)
+let g:WhichKeyDesc_rider_usage = "<leader>ru usage"
+map <leader>ru <Action>(ReSharperGotoImplementation)
+let g:WhichKeyDesc_rider_choose_lookup_item = "<C-y> choose item"
+map <leader>c <Action>(EditorChooseLookupItem)
+let g:WhichKeyDesc_rider_tasks_and_contexts = "<leader>c tasks and contexts"
+map <leader>c <Action>(tasks.and.contexts)
+
+"rider ide testing
+let g:WhichKeyDesc_testing = "<leader>t testing"
+let g:WhichKeyDesc_testing_run = "<leader>tr run"
+map <leader>tr <Action>(RiderUnitTestRunContextAction)
+let g:WhichKeyDesc_testing_toggle_line_breakpoint = "<leader>tb toggle line breakpoint"
+map <leader>tb <Action>(ToggleLineBreakpoint)
+
+let g:WhichKeyDesc_clear_notifications = "<leader>rc clear all notifications"
+map <leader>rc <Action>(ClearAllNotifications)
+
+"format code
+let g:WhichKeyDesc_format_code = "<leader>f format code"
+map <leader>f <Action>(ReformatCode)
+
+"vertical navigation
+nnoremap zm zz
