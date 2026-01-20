@@ -141,6 +141,8 @@ let g:WhichKeyDesc_rider_choose_lookup_item = "<C-y> choose item"
 map <leader>c <Action>(EditorChooseLookupItem)
 let g:WhichKeyDesc_rider_tasks_and_contexts = "<leader>c tasks and contexts"
 map <leader>c <Action>(tasks.and.contexts)
+let g:WhichKeyDesc_rider_goto_header = "g\; goto header"
+map g; <Action>(SwitchHeaderSource)
 
 "rider ide testing
 let g:WhichKeyDesc_testing = "<leader>t testing"
